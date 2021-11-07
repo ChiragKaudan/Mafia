@@ -29,4 +29,12 @@ public class Player
     {
         return role;
     }
+    /**
+     * Checks to see if the current player is alive
+     * @return boolean whether the player is alive or not
+     */
+    public boolean checkPlayerAlive()
+    {
+        return isAlive;
+    }
 }
