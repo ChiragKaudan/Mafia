@@ -2,17 +2,12 @@ package Mafia;
 
 public class Sheriff extends Role
 {
-    private Sheriff()
+    public Sheriff()
     {
         this.isTown=true;
     }
 
-    private static Sheriff instance = new Sheriff();
 
-    public static Sheriff getInstance()
-    {
-        return instance;
-    }
 
     public boolean Interrogate()
     {
