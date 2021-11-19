@@ -1,4 +1,4 @@
-package mafia;
+package Mafia;
 
 public class Mafia extends Role
 {

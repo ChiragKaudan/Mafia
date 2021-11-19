@@ -1,8 +1,6 @@
 package Mafia;
 
-import javax.swing.*;
-
-public class Role extends JComponent
+public class Role
 {
     private int voteCounter;
     protected boolean isTown;

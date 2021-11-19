@@ -1,5 +1,4 @@
 package Mafia;
-import javax.swing.*;
 import java.util.*;
 
 public class Game
@@ -10,13 +9,12 @@ public class Game
     ArrayList<Role> roleList;
     public static void main(String [] args) {
         System.out.println("Testing Doctor, Sheriff, and Vigilante for design pattern.");
-        Vigilante vigilante=Vigilante.getInstance();
-        vigilante.dayOne();
-        vigilante.punishment();
-        vigilante.shoot();
         Doctor doctor=Doctor.getInstance();
-        doctor.heal();
-
+        Sheriff sheriff=Sheriff.getInstance();
+        Vigilante vigilante=Vigilante.getInstance();
+        doctor.heal(1);
+        sheriff.Interrogate();
+        vigilante.shoot(1);
 
 
     }
