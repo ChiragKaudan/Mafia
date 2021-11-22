@@ -1,23 +1,20 @@
-package Mafia;
+package mafia;
 
 public class Sheriff extends Role
 {
-    private Sheriff()
+    public Sheriff()
     {
         this.isTown=true;
     }
 
-    private static Sheriff instance = new Sheriff();
-
-    public static Sheriff getInstance()
-    {
-        return instance;
-    }
-
     public boolean Interrogate()
     {
-        System.out.println("Test Sheriff object.");
         //insert code to sheriff to interrogate others
         return false;
+    }
+    
+    
+    public String toString() {
+    	return "Sheriff";
     }
 }

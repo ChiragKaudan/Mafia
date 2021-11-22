@@ -1,21 +1,27 @@
-package Mafia;
+package mafia;
 
 public class Doctor extends Role
 {
-
-    private Doctor()
+    public Doctor()
     {
         this.isTown=true;
     }
-    private static Doctor instance = new Doctor();
 
-    public static Doctor getInstance()
+    
+    public int heal() 
     {
-        return instance;
+    	
+		return -1;
+    	
+    	//If self-heal counter != 0 then Prompts user if they want to self-heal. 
+    	// if no, prompt
+    	
+    	
+        
     }
-
-    public void heal(int nameProtect)
-    {
-        System.out.println("Test Doctor object.");
+    
+    public String toString() {
+    	return "Doctor";
     }
+    
 }
