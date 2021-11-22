@@ -1,3 +1,4 @@
+package Mafia;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,9 +7,9 @@ import java.util.ArrayList;
 
 public class GameUI extends JFrame{
 	//Creates instance variables
-	private static final int HEIGHT = 400;
-	private static final int WIDTH = 700;
-	private JLabel role, usernameLabel;
+	private static final int HEIGHT = 400; //Height of the UI
+	private static final int WIDTH = 700; //Width of the UI
+	private JLabel phase, usernameLabel, round;
 	private JButton usernameSelectionButton;
 	private JTextField usernameTextBox;
 	private String username;
@@ -19,16 +20,19 @@ public class GameUI extends JFrame{
 	public void testViewRun()
 	{
 		setTitle("Game Screen"); //Sets the title of the window
-		role = new JLabel("Role: Town"); //Sample role
+		phase = new JLabel("Phase: Day"); //Sample phase
 		usernameSelectionButton = new JButton("Enter your username: "); 
+		round = new JLabel("Round: 1");
 		usernameTextBox = new JTextField(12);
 		usernameSelectionHandler = new UsernameSelectionHandler();
 		usernameSelectionButton.addActionListener(usernameSelectionHandler);
 		usernameLabel = new JLabel("Username: " + username);
 		pane = getContentPane();
 		pane.setLayout(new GridLayout(2,1));
+		//Adding panes
 		pane.add(usernameSelectionButton);
-		pane.add(role);
+		pane.add(phase);
+		pane.add(round);
 		pane.add(usernameTextBox);
 		pane.add(usernameLabel);
 		setSize(WIDTH, HEIGHT);
