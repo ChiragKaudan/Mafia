@@ -8,6 +8,7 @@ public class Game
     int numOfPlayer;
     ArrayList<Player> playerList;
     ArrayList<Role> roleList;
+    
     public static void main(String [] args) {
         System.out.println("Testing Doctor, Sheriff, and Vigilante for design pattern.");
         Vigilante vigilante=Vigilante.getInstance();
@@ -17,8 +18,11 @@ public class Game
         Doctor doctor=Doctor.getInstance();
         doctor.heal();
 
-
-
+        Sheriff sheriff = new Sheriff();
+        sheriff.Interrogate();
+        
+        Mafia mafia = new Mafia();
+        mafia.hit();
     }
 
     public void play()
