@@ -79,32 +79,6 @@ public class GameUI extends JFrame{
 		setSize(WIDTH, HEIGHT);
 		setVisible(true);
 	}
-	
-	/**
-	 * Handles the updating of rounds + day/night cycles for easy visibility
-	 * 
-	 */
-	private class UpdateHandler implements ActionListener
-	{
-		public void actionPerformed(ActionEvent e)
-		{
-			buttonCounter += 1;
-			if(buttonCounter % 2 == 1)
-			{
-				roundCounter += 1;
-				phase.setText("Phase: Day");
-				phaseCounter = 1;
-			}
-			else
-			{
-				phase.setText("Phase: Night");
-				phaseCounter = 0;
-			}
-			roundLabel.setText("Round: " + roundCounter);
-			
-		}
-	}
-	
 	/**
 	 * Generates an arraylist of String that represents the names of the players and returns a string representation of it
 	 * @return
