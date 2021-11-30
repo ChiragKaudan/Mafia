@@ -1,14 +1,15 @@
 package Mafia;
 import javax.swing.*;
+
 import java.util.*;
 
 public class Game
 {
 
     int numOfPlayer;
+    BlockingQueue<Message> queueList;
     ArrayList<Player> playerList;
     ArrayList<Role> roleList;
-    
     public static void main(String [] args) {
         System.out.println("Testing Doctor, Sheriff, and Vigilante for design pattern.");
         Vigilante vigilante=Vigilante.getInstance();
@@ -18,11 +19,8 @@ public class Game
         Doctor doctor=Doctor.getInstance();
         doctor.heal();
 
-        Sheriff sheriff = new Sheriff();
-        sheriff.Interrogate();
-        
-        Mafia mafia = new Mafia();
-        mafia.hit();
+
+
     }
 
     public void play()
@@ -36,6 +34,15 @@ public class Game
         System.out.println("Enter your usernames.");
         System.out.println("Here are your roles.");
         //continue game logic using other classes.
+    }
+    
+    /**
+     * Responsible for creating instance of GameUI objects and passing parameters to it
+     */
+    public void setUI()
+    {
+    	GameUI newUI = new GameUI(playerList);
+    	newUI.ViewRun();
     }
 
 }
