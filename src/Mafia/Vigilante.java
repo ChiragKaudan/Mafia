@@ -1,6 +1,7 @@
-package Mafia;
+package mafia;
 
 import javax.swing.*;
+
 
 /**
  * Vigilante class, will have the logic for shooting a player or themselves. Singleton design pattern used.
@@ -82,5 +83,18 @@ public class Vigilante extends Role
                     JOptionPane.PLAIN_MESSAGE);
             return -1;
         }
+    }
+    
+    public String toString() {
+    	return "Vigilante";
+    }
+    
+    public String description()
+    {
+        return "You are a member of the town, an ex-town militia man with your own sense of justice and a gun. Every day an innocent"
+        		+ "townsperson is murdered by the Mafia, your anger grows. Since the law hasn't decided to take them"
+        		+ "down, you can decide to do it yourself by shooting a player you suspect is a member of the Mafia. But be careful"
+        		+ "you only have 2 bullets and you always risk shooting an innocent townsperson, and the consequences "
+        		+ "associated with that are horrendous!";
     }
 }

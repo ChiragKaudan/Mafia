@@ -1,6 +1,6 @@
-package Mafia;
+package mafia;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class Sheriff extends Role
 {
@@ -19,5 +19,17 @@ public class Sheriff extends Role
     	else {
         	return -1;
         }
+    }
+    
+    public String toString() {
+    	return "Sheriff";
+    }
+    
+    public String description()
+    {
+        return "You are the sheriff of the town, now keeping a low-profile to hide from the Mafia who would love nothing more"
+        		+ "than being able to hunt you down and end your life, because of how big of a threat you are to them. You can "
+        		+ "choose to interrogate any player each night to determine whether they are suspicious (a member of the Mafia) "
+        		+ "or not.";
     }
 }

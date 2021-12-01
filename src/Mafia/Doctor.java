@@ -1,13 +1,14 @@
-package Mafia;
+package mafia;
 
 import javax.swing.*;
+
 
 /**
  * Doctor class, will have the logic for healing a player or themselves. Singleton design pattern used.
  */
 public class Doctor extends Role
 {
-    boolean selfHeal;
+    private boolean selfHeal;
 
     /**
      * Singleton Instantiation of constructor.
@@ -32,6 +33,7 @@ public class Doctor extends Role
      * This method allows the doctor to heal either themselves or someone else that they choose. However, the Doctor can ony heal themselves once.
      * @return the index of the player that is chosen to be healed.
      */
+    
     public int heal()
     {
         if(selfHeal==true)
@@ -55,4 +57,19 @@ public class Doctor extends Role
             return Integer.valueOf(inputValue2);
         }
     }
+    
+    public String toString() {
+    	return "Doctor";
+    }
+    
+    public String description()
+    {
+        return "You are the doctor of the town, a highly-trained trauma surgeon that can heal even the most gruesome attacks"
+        		+ "in a single night! Each night, you may choose to heal another player or for one night only, heal yourself, "
+        		+ "protecting your chosen patient from any potential attacks that would normally mean certain death. You swear"
+        		+ " to protect the innocent townspeople and work with them to weed out the members"
+        		+ " of the Mafia."
+        		;
+    }
+    
 }
